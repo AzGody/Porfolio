@@ -51,3 +51,84 @@ section:nth-child(odd) {
     background-color: black;
     top: 0;
   }
+
+  .home-flex {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 35vh;
+  }
+
+  .home-flex h1 {
+    text-align: center;
+    color: white;
+    font-size: 36pt;
+    font-weight: 500;
+    /* transform: translate(-50%, -50%); */
+    width: 100vw;
+    font-family: "Oswald", sans-serif;
+  }
+
+  .flex{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav {
+    bottom: 0;
+    left: 0;
+    position: relative;
+    background: #1b242f;
+    border-bottom: 3px solid #04c2c9;
+    height: 50px;
+    text-align: left;
+    width: 100%;
+    z-index: 99;
+  }
+
+  @media screen and (min-width: 600px)
+{
+  nav .link {
+      background: none;
+      height: auto;
+      overflow: visible;
+      position: initial;
+      text-align: left;
+  }
+}
+
+nav .link {
+    background: #333;
+    height: 0;
+    max-width: 1200px;
+    overflow: hidden;
+    position: absolute;
+    top: 53px;
+    transition: height 0.3s ease-out;
+    width: 100%;
+}
+
+div {
+    display: block;
+}
+
+@media screen and (min-width: 600px)
+{
+nav .link div {
+    display: inline;
+    font-size: initial;
+    margin: 0 20px;
+    padding: initial;
+}
+}
+
+nav .link div {
+    cursor: pointer;
+    font-size: 12pt;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
