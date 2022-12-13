@@ -42,6 +42,7 @@ const init_pointer = (options) => {
             pointerColor: "#2994D1",
             ringSize: 25,
             ringClickSize: (options["ringSize"] || 25) - 5,
+            hoverSize: 30
         }
         if (options[option] == undefined) {
             return defaultObj[option]
@@ -54,22 +55,30 @@ const init_pointer = (options) => {
         ringX = trace(ringX, mouseX, 0.15)
         ringY = trace(ringY, mouseY, 0.15)
 
-        if (document.querySelector(".p-action-click:hover")) {
+        if (document.querySelector(".page-link:hover")) {
             pointer.style.borderColor = getOption("pointerColor")
+            ring.style.padding = getOption("hoverSize") + "px"
             isHover = true
         } else {
             pointer.style.borderColor = "white"
             isHover = false
+            if (mouseDown) {
+                ring.style.padding = getOption("ringClickSize") + "px"
+            } else {
+                ring.style.padding = getOption("ringSize") + "px"
+            }
         }
         ring.style.borderColor = getOption("pointerColor")
-        if (mouseDown) {
-            ring.style.padding = getOption("ringClickSize") + "px"
-        } else {
-            ring.style.padding = getOption("ringSize") + "px"
-        }
+        // if(isHover) {
+        //     ring.style.padding = 100
+        // }else {
+        //     ring.style.padding = 25
+        // }
+        
 
         pointer.style.transform = `translate(${mouseX}px, ${mouseY}px)`
         ring.style.transform = `translate(${ringX - (mouseDown ? getOption("ringClickSize") : getOption("ringSize"))}px, ${ringY - (mouseDown ? getOption("ringClickSize") : getOption("ringSize"))}px)`
+        // ring.style.transform = `translate(${ringX - (isHover ? getOption("ringClickSize") : getOption("ringClickSize"))}px, ${ringY - (isHover ? getOption("ringClickSize") : getOption("ringClickSize"))}px)`
 
         requestAnimationFrame(render)
     }

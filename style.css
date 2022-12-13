@@ -188,6 +188,17 @@ nav .link-wrap {
   }
 }
 
+nav.fixed {
+  bottom: inherit;
+  left: 0;
+  position: fixed;
+  top: 8px;
+}
+
+nav.fixed.desk {
+  animation: popDown 0.5s;
+}
+
 .arrows {
 	width: 60px;
 	height: 72px;
