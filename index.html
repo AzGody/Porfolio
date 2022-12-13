@@ -8,6 +8,7 @@
     <title>Portfolio Michel</title>
     <link href="style.css" rel="stylesheet">
     <link href="pointer.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 </head>
 <body>
     <div class="header">
@@ -17,24 +18,32 @@
     </div>
     <section id="particles-js">
         <div class="home-flex">
-            <h1>Bastien Oswald</h1>
+            <h1>Bastien <span class="highlight">OSWALD</span></h1>
             <!-- <div class="home-spacer"></div> -->
             <div class="text"></div>
           </div>
+          <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+          </svg>
     </section>
-    <nav class="flex menu">
-        <div class="link">
-            <div class="link-page">Home</div>
-            <div class="link-page">Test</div>
-            <div class="link-page">test2</div>
-            <div class="link-page">test3</div>
-        </div>
+    <nav class="flex">
+      <div class="link-wrap">
+        <div class="page-link" dest="home">home</div>
+        <div class="page-link" dest="about">about</div>
+        <div class="page-link" dest="portfolio">portfolio</div>
+        <div class="page-link" dest="blog">blog</div>
+        <div class="page-link" dest="contact">contact</div>
+      </div>
+      <i class="mdi mdi-menu"></i>
     </nav>
     <section></section>
     <section></section>
     <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./script.js"></script>
+    
 </body>
 <script src="pointer.js"></script>
 <script>
