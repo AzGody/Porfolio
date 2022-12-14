@@ -8,6 +8,7 @@ const pointer = document.createElement("div")
 pointer.id = "pointer-dot"
 const ring = document.createElement("div")
 ring.id = "pointer-ring"
+
 document.body.insertBefore(pointer, document.body.children[0])
 document.body.insertBefore(ring, document.body.children[0])
 
@@ -17,6 +18,7 @@ let ringX = -100
 let ringY = -100
 let isHover = false
 let mouseDown = false
+ring.style.transition = '0.15s'
 const init_pointer = (options) => {
 
     window.onmousemove = (mouse) => {
@@ -52,9 +54,9 @@ const init_pointer = (options) => {
     }
 
     const render = () => {
-        ringX = trace(ringX, mouseX, 0.15)
-        ringY = trace(ringY, mouseY, 0.15)
-
+        ringX = trace(ringX, mouseX, 1)
+        ringY = trace(ringY, mouseY, 1)
+     
         if (document.querySelector(".page-link:hover")) {
             pointer.style.borderColor = getOption("pointerColor")
             ring.style.padding = getOption("hoverSize") + "px"
@@ -63,9 +65,11 @@ const init_pointer = (options) => {
             pointer.style.borderColor = "white"
             isHover = false
             if (mouseDown) {
+             
                 ring.style.padding = getOption("ringClickSize") + "px"
             } else {
                 ring.style.padding = getOption("ringSize") + "px"
+                
             }
         }
         ring.style.borderColor = getOption("pointerColor")
