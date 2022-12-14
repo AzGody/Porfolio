@@ -13,6 +13,7 @@ body {
   /* overflow: hidden; */
   /* background-color: green; */
   color: #fff;
+  background-color: rgb(231, 231, 231);
   font-family: "Raleway";
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -26,7 +27,7 @@ section {
   font-size: 3rem;
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: rgb(231, 231, 231);
 }
 
 section:nth-child(odd) {
@@ -97,7 +98,7 @@ nav {
   z-index: 99;
   justify-content: left !important;
   padding-left: 200px;
-  display: block;
+
 }
 
 ul {
@@ -186,6 +187,7 @@ nav .link-wrap {
     color: white;
     /* font-family: "Raleway"; */
     text-transform: uppercase;
+    
   }
 }
 
@@ -199,6 +201,7 @@ nav.fixed {
   left: 0;
   position: fixed;
   top: 8px;
+  
 }
 
 .flex {
@@ -207,6 +210,31 @@ nav.fixed {
   flex-direction: row;
   justify-content: center;
 }
+.flex:nth-child(1) {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.row{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  justify-content: space-between;
+}
+
+.testtest{
+  width: 500px;
+  height: 500px;
+  background-color: #b61924;
+}
+
+img{
+  width: 600px;
+}
+
 
 .arrows {
 	width: 60px;
@@ -326,4 +354,16 @@ nav.fixed {
   -webkit-transform: translate(0%, 0%);
   transform: translate(0%, 0%);
   opacity: 1;
+}
+
+.about {
+  padding: 130px 0 100px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container div {
+  color: #1b242f;
+  font-size: 30pt;
+  font-weight: 700;
 }
