@@ -2,6 +2,8 @@
 //Top Scroll bar
 window.onscroll = function() {myFunction()};
 
+
+//Animation go to page from menu
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -20,6 +22,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 });
+
+
 var w = window.innerWidth
 particlesJS("particles-js", {
   "particles": {
