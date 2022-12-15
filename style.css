@@ -218,23 +218,27 @@ nav.fixed {
 }
 
 .row{
+  padding-top: 80px;
   align-items: center;
   display: flex;
   flex-direction: row;
   /* justify-content: center; */
   justify-content: space-between;
+  width: 100%;
 }
 
 .testtest{
+  padding: 20px;
   width: 500px;
-  height: 500px;
-  background-color: #b61924;
+  height: 560px;
+  /* background-color: #1b242f; */
 }
 
 img{
   width: 600px;
+  display: block;
+  margin: 0 auto 0 auto;
 }
-
 
 .arrows {
 	width: 60px;
@@ -357,13 +361,144 @@ img{
 }
 
 .about {
-  padding: 130px 0 100px 0;
+  padding: 100px 0 100px 0;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.container div {
+.container div:nth-child(1) {
   color: #1b242f;
   font-size: 30pt;
   font-weight: 700;
+}
+
+.label{
+  font-size: 18pt;
+  font-weight: 700;
+  text-align: center;
+}
+
+.desc{
+  font-size: 12pt;
+  font-weight: 400;
+  text-align: center;
+  /* word-wrap: break-word; */
+}
+
+.picture-global {
+  width: 400px;
+}
+
+li{ /*style the li tag*/
+	list-style-type: none;
+	font-family: sans-serif;
+  height: 20px;
+}
+
+.skills{ /*style the text*/
+  display:contents;
+	width: 500px;
+	color: #fff;
+  padding: 30px;
+}
+
+.skills li{ /*set margin of li*/
+	margin: 30px 0;
+}
+.skills li:nth-child(1){ /*set margin of li*/
+	margin: 0;
+}
+
+.skills h1 {
+  font-size: 20pt;
+  color: black;
+  padding-left: 20px;
+  margin: 0 !important;
+}
+
+
+
+.skills h3 {
+  font-size: 12pt;
+  /* color: black; */
+  font-weight: 700;
+}
+.skills h3:nth-child(1){ /*set margin of li*/
+	margin-top: 0;
+}
+
+.bar{ /*style the bar*/
+	background-color: #353b48;
+	display: block;
+	height: 3px;
+	/* border: 1px solid rgba(0,0,0,0.1); */
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0 0 5px #2994D1;
+}
+
+.bar span{ /*style the span tag*/
+	height: 4px;
+	float: left;
+	background-color: #2994D1;
+}
+
+.html{ /*set skills and animation of html*/
+	width: 80%;
+	animation: html 2s;
+}
+
+.css{ /*set skills and animation of css*/
+	width: 93%;
+	animation: css 2s;
+}
+
+.javascript{ /*set skills and animation of javascript*/
+	width: 50%;
+	animation: javascript 2s;
+}
+
+.jquery{ /*set skills and animation of jquery*/
+	width: 30%;
+	animation: jquery 2s;
+}
+
+@keyframes html{ /*animate html skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 80%;
+	}
+}
+
+@keyframes css{ /*animate css skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 93%;
+	}
+}
+
+@keyframes javascript{ /*animate javascript skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 50%;
+	}
+}
+
+@keyframes jquery{ /*animate jquery skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 30%;
+	}
 }
