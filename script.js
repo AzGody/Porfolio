@@ -11,7 +11,15 @@ function myFunction() {
 
 //ParticleJs
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
 
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
 var w = window.innerWidth
 particlesJS("particles-js", {
   "particles": {

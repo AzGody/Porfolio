@@ -34,7 +34,9 @@ section:nth-child(odd) {
   color: white;
   background-color: #b61924;
 }
-
+a{
+  color: transparent;
+}
 .header {
   position: fixed;
   top: 0;
@@ -107,61 +109,11 @@ ul {
   padding: 0;
 }
 
-a {
-  display: inline-block;
-  padding: 0 10px;
-}
-
-a {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  padding: 8px 0;
-  /* color: #fff; */
-  text-decoration: none;
-}
-
-a:hover {
-  /* color: #fff; */
-  text-decoration: none;
-}
-
-a:before,
-a:after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -2px;
-  background: #fff;
-}
-
-a:before {
-  left: 0;
-}
-
-a:after {
-  right: 0;
-  background: #fff;
-  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-a:hover:before {
-  background: #fff;
-  width: 100%;
-  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-a:hover:after {
-  background: transparent;
-  width: 100%;
-  transition: 0s;
-}
 
 nav .link-wrap {
   background: #333;
   height: 0;
-  max-width: 1200px;
+  max-width: 1000px;
   overflow: hidden;
   position: relative;
   top: 53px;
@@ -232,6 +184,18 @@ nav.fixed {
   width: 500px;
   height: 560px;
   /* background-color: #1b242f; */
+}
+@media screen and (max-width: 800px) {
+  .row {
+    flex-direction: column;
+
+  }
+  .testtest{
+    /* padding: 20px; */
+    width: 85%;
+    height: 560px;
+    /* background-color: #1b242f; */
+  }
 }
 
 img{
@@ -360,7 +324,7 @@ img{
   opacity: 1;
 }
 
-.about {
+#about {
   padding: 100px 0 100px 0;
   max-width: 1200px;
   margin: 0 auto;
@@ -388,6 +352,14 @@ img{
 .picture-global {
   width: 400px;
 }
+
+@media screen and (max-width: 800px) {
+  .picture-global {
+    width: 85%;
+    padding-bottom: 50px;
+  }
+}
+
 
 li{ /*style the li tag*/
 	list-style-type: none;
@@ -430,8 +402,8 @@ li{ /*style the li tag*/
 .bar{ /*style the bar*/
 	background-color: #353b48;
 	display: block;
-	height: 3px;
-	/* border: 1px solid rgba(0,0,0,0.1); */
+	height: 4px;
+	/* border: 1px solid rgba(0,0,0,0.01); */
 	border-radius: 4px;
 	overflow: hidden;
 	box-shadow: 0 0 5px #2994D1;
@@ -443,22 +415,22 @@ li{ /*style the li tag*/
 	background-color: #2994D1;
 }
 
-.html{ /*set skills and animation of html*/
+.html.active{ /*set skills and animation of html*/
 	width: 80%;
 	animation: html 2s;
 }
 
-.css{ /*set skills and animation of css*/
+.css.active{ /*set skills and animation of css*/
 	width: 93%;
 	animation: css 2s;
 }
 
-.javascript{ /*set skills and animation of javascript*/
+.javascript.active{ /*set skills and animation of javascript*/
 	width: 50%;
 	animation: javascript 2s;
 }
 
-.jquery{ /*set skills and animation of jquery*/
+.jquery.active{ /*set skills and animation of jquery*/
 	width: 30%;
 	animation: jquery 2s;
 }
