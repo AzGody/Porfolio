@@ -1,3 +1,13 @@
+import './style.css'
+import './pointer.css'
+import './index.js'
+// import './pointer.js'
+import Experience from './Experience/Experience.js'
+
+const experience = new Experience({
+    targetElement: document.querySelector('.laboule')
+})
+
 
 //Top Scroll bar
 window.onscroll = function() {myFunction()};
@@ -213,3 +223,5 @@ const next = () => {
 };
 
 next();
+
+

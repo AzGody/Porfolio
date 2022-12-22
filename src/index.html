@@ -24,13 +24,14 @@
       <!-- <div class="home-spacer"></div> -->
       <div class="text"></div>
     </div>
-    <svg class="arrows">
-      <path class="a1" d="M0 0 L30 32 L60 0"></path>
-      <path class="a2" d="M0 20 L30 52 L60 20"></path>
-      <path class="a3" d="M0 40 L30 72 L60 40"></path>
+    <svg class="arrows" ref="#about">
+      <a href="#about"><path class="a1" d="M0 0 L30 32 L60 0"></path></a>
+      <a href="#about"><path class="a2" d="M0 20 L30 52 L60 20"></path></a>
+      <a href="#about"><path class="a3" d="M0 40 L30 72 L60 40"></path></a>
     </svg>
+
   </section>
-  <nav class="flex desk">
+  <nav id="nav" class="flex desk">
     <div class="link-wrap">
       <a href="#particles-js">
         <div class="page-link" dest="home">acceuil</div>
@@ -44,7 +45,9 @@
       <a href="#projects">
         <div class="page-link" dest="portfolio">Projets</div>
       </a>
-      <div class="page-link" dest="contact">contact</div>
+      <a href="#contact">
+        <div class="page-link" dest="contact">contact</div>
+      </a>
     </div>
     <i class="mdi mdi-menu"></i>
   </nav>
@@ -53,12 +56,9 @@
       <div>A PROPOS</div>
       <div class="row">
         <div class="picture-global">
-          <img src="img/moi.jpg" style="width:300px" alt="myself">
+          <img src="../static/assets/moi.jpg" style="width:300px" alt="myself">
           <h1 class="label">Qui suis-je?</h1>
-          <div class="desc">Lorem ipsum dolor, sit amet consectetur <span class="highlight">OSWALD</span>adipisicing
-            elit. Aliquid, esse fugiat quae fugit<span class="highlight">OSWALD</span> voluptate rem cum nobis officia
-            animi? Vitae explicabo aliquid, <span class="highlight">OSWALD</span>optio non ut consequuntur quaerat
-            facilis unde eum?</div>
+          <div class="desc">Bonjour, je m'appelle Bastien <span class="highlight">OSWALD</span> Passioné par le développement, j'essaye de créer une réelle expérience utilisateur pour les sites que je développes pour révolution Internet de demain.</div>
         </div>
         <div class="testtest">
           <div class="skills"> <!-- create a div -->
@@ -108,7 +108,7 @@
         </div>
       </div>
     </div>
-    <div id="experience" class="experience">EXPERIENCE</div>
+    <div id="experience" class="experience-title">EXPERIENCE</div>
     <div class="ag-timeline-block">
       <div class="ag-section">
         <div class="ag-format-container">
@@ -208,8 +208,8 @@
         </div>
       </div>
     </div>
-    <div id="projects" class="experience">PROJETS</div>
-    <div class="container">
+    <div id="projects" class="experience-title">PROJETS</div>
+    <div class="container-grid">
       <div class="wrapper">
         <div class="card">
           <i class="fal fa-arrow-right">
@@ -237,18 +237,56 @@
         <div class="card">
           <i class="fal fa-arrow-right">
 
-            <div class="text-card">Statistiques</div>
+            <div class="text-card">Mijotons</div>
           </i>
         </div>
       </div>
     </div>
   </div>
-  <section></section>
-  <section></section>
+  <section id="contact">
+    <div class="container-boule">
+      <div class="inner">
+        <div class="panel panel-left">
+          <div class="panel-content">
+            <div class="image-background">
+              <div class="laboule"></div>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-right">
+          <div class="panel-content">
+            <div class="login-box">
+              <h2>Contact</h2>
+              <form>
+                <div class="user-box">
+                  <input type="text" name="" required="">
+                  <label>Nom</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="" required="">
+                  <label>Email</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="" required="">
+                  <label>Message</label>
+                </div>
+                <a href="#">
+                  <!-- <span></span>
+                  <span></span> -->
+                  Envoyer
+                </a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu"></div>
+  </section>
   <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="./script.js"></script>
-  <script src="./index.js"></script>
+  <script src="script.js"></script>
+  <script src="index.js"></script>
 
 </body>
 <script src="pointer.js"></script>
