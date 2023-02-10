@@ -249,7 +249,7 @@ body::-webkit-scrollbar {
   
   section:nth-child(odd) {
     color: white;
-    background-color: #b61924;
+    background-color: black;
   }
   
   #particles-js {

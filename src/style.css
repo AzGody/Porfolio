@@ -37,7 +37,7 @@ section {
 
 section:nth-child(odd) {
   color: white;
-  background-color: #b61924;
+  background-color: black;
 }
 
 a {
